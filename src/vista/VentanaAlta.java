@@ -142,10 +142,15 @@ public class VentanaAlta extends javax.swing.JDialog {
         if(numeroText.isEmpty() || piso.isEmpty() || precioText.isEmpty()){
             JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios");
         } else {
-            Habitacion h = new Habitacion(Integer.parseInt(numeroText), piso, Integer.parseInt(precioText), true);
-            hotel.registrarHabitacion(h);
-            hotel.guardar();
-            JOptionPane.showMessageDialog(this, "El habitacion registro correctamente");
+            Habitacion h = hotel.buscarHabitacion(Integer.parseInt(numeroText));
+            if(h == null){
+                hotel.registrarHabitacion(new Habitacion(Integer.parseInt(numeroText), piso, Integer.parseInt(precioText), true));
+                hotel.guardar();
+                JOptionPane.showMessageDialog(this, "El habitacion registro correctamente");
+            } else {
+                JOptionPane.showMessageDialog(this, "El numero de habitacion ya existe");
+            }
+            
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
