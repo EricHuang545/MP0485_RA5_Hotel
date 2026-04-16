@@ -109,7 +109,7 @@ public class VentanaDisponibilidad extends javax.swing.JDialog {
             } else {
                 hotel.cambiarDisponibilidad(numero);
                 hotel.guardar();
-                JOptionPane.showConfirmDialog(this, "El cambio realizo correctamente");
+                JOptionPane.showMessageDialog(this, "El cambio realizo correctamente");
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
