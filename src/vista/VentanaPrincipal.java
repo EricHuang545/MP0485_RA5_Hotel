@@ -5,7 +5,6 @@
 package vista;
 
 import controlador.Hotel;
-import persistencia.FicheroHabitaciones;
 
 /**
  *
@@ -15,16 +14,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName());
     private static Hotel hotel;
-    private static FicheroHabitaciones fh;
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
         initComponents();
         hotel = new Hotel();
-        fh = new FicheroHabitaciones();
         Hotel.cargar();
-        fh.crearFichero();
     }
 
     /**
