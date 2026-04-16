@@ -108,6 +108,7 @@ public class VentanaBusca extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(this, "El habitacion no existe");
             } else {
                 JOptionPane.showMessageDialog(this, habitacion.infoHabitacion(), "Datos habitacion",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed

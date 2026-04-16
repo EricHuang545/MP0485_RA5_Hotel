@@ -116,6 +116,7 @@ public class VentanaElimina extends javax.swing.JDialog {
                     hotel.eliminarHabitacion(Integer.parseInt(numeroText));
                     hotel.guardar();
                     JOptionPane.showMessageDialog(this, "El habitacion elimino correctamente");
+                    this.dispose();
                 }
             }
         }

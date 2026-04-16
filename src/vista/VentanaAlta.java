@@ -147,6 +147,7 @@ public class VentanaAlta extends javax.swing.JDialog {
                 hotel.registrarHabitacion(new Habitacion(Integer.parseInt(numeroText), piso, Integer.parseInt(precioText), true));
                 hotel.guardar();
                 JOptionPane.showMessageDialog(this, "El habitacion registro correctamente");
+                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(this, "El numero de habitacion ya existe");
             }

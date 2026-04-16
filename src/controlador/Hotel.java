@@ -14,7 +14,7 @@ import persistencia.FicheroHabitaciones;
  */
 public class Hotel {
 
-    private static ArrayList<Habitacion> habitaciones = new ArrayList<>();;
+    private static ArrayList<Habitacion> habitaciones;
 
     public static void guardar() {
         FicheroHabitaciones fh = new FicheroHabitaciones();
